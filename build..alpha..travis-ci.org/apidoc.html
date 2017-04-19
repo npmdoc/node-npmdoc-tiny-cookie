@@ -1,0 +1,366 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Alex1990/tiny-cookie#readme"
+
+    >tiny-cookie (v1.0.1)</a>
+</h1>
+<h4>A tiny cookie manipulation plugin</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.tiny-cookie">module tiny-cookie</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tiny-cookie.tiny-cookie">
+            function <span class="apidocSignatureSpan"></span>tiny-cookie
+            <span class="apidocSignatureSpan">(key, value, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tiny-cookie.enabled">
+            function <span class="apidocSignatureSpan">tiny-cookie.</span>enabled
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tiny-cookie.get">
+            function <span class="apidocSignatureSpan">tiny-cookie.</span>get
+            <span class="apidocSignatureSpan">(key, raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tiny-cookie.getRaw">
+            function <span class="apidocSignatureSpan">tiny-cookie.</span>getRaw
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tiny-cookie.remove">
+            function <span class="apidocSignatureSpan">tiny-cookie.</span>remove
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tiny-cookie.set">
+            function <span class="apidocSignatureSpan">tiny-cookie.</span>set
+            <span class="apidocSignatureSpan">(key, value, raw, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tiny-cookie.setRaw">
+            function <span class="apidocSignatureSpan">tiny-cookie.</span>setRaw
+            <span class="apidocSignatureSpan">(key, value, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.tiny-cookie" id="apidoc.module.tiny-cookie">module tiny-cookie</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.tiny-cookie.tiny-cookie" id="apidoc.element.tiny-cookie.tiny-cookie">
+        function <span class="apidocSignatureSpan"></span>tiny-cookie
+        <span class="apidocSignatureSpan">(key, value, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cookie(key, value, opts) {
+  if (value === void 0) {
+    return Cookie.get(key);
+  } else if (value === null) {
+    Cookie.remove(key);
+  } else {
+    Cookie.set(key, value, opts);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tiny-cookie.enabled" id="apidoc.element.tiny-cookie.enabled">
+        function <span class="apidocSignatureSpan">tiny-cookie.</span>enabled
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enabled = function () {
+  var key = &#x27;__test_key&#x27;;
+  var enabled;
+
+  document.cookie = key + &#x27;=1&#x27;;
+  enabled = !!document.cookie;
+
+  if (enabled) Cookie.remove(key);
+
+  return enabled;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```bash
+bower install tiny-cookie
+```
+
+## APIs
+
+### Cookie.<span class="apidocCodeKeywordSpan">enabled</span>()
+
+Check if the cookie is enabled.
+
+### Cookie.get(key)
+
+**Alias: Cookie(key)**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tiny-cookie.get" id="apidoc.element.tiny-cookie.get">
+        function <span class="apidocSignatureSpan">tiny-cookie.</span>get
+        <span class="apidocSignatureSpan">(key, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (key, raw) {
+  if (typeof key !== &#x27;string&#x27; || !key) return null;
+
+  key = &#x27;(?:^|; )&#x27; + escapeRe(key) + &#x27;(?:=([^;]*?))?(?:;|$)&#x27;;
+
+  var reKey = new RegExp(key);
+  var res = reKey.exec(document.cookie);
+
+  return res !== null ? (raw ? res[1] : decodeURIComponent(res[1])) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## APIs
+
+### Cookie.enabled()
+
+Check if the cookie is enabled.
+
+### Cookie.<span class="apidocCodeKeywordSpan">get</span>(key)
+
+**Alias: Cookie(key)**
+
+Get the cookie value with decoding, using `decodeURIComponent`.
+
+### Cookie.getRaw(key)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tiny-cookie.getRaw" id="apidoc.element.tiny-cookie.getRaw">
+        function <span class="apidocSignatureSpan">tiny-cookie.</span>getRaw
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRaw = function (key) {
+  return Cookie.get(key, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Cookie.get(key)
+
+**Alias: Cookie(key)**
+
+Get the cookie value with decoding, using `decodeURIComponent`.
+
+### Cookie.<span class="apidocCodeKeywordSpan">getRaw</span>(key)
+
+**Also: Cookie.get(key, true)**
+
+Get the cookie value without decoding.
+
+### Cookie.set(key, value, options)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tiny-cookie.remove" id="apidoc.element.tiny-cookie.remove">
+        function <span class="apidocSignatureSpan">tiny-cookie.</span>remove
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (key) {
+  Cookie.set(key, &#x27;a&#x27;, { expires: new Date() });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Cookie.setRaw(key, value, options)
+
+**Also: Cookie.set(key, value, true, options)**
+
+Set a cookie without encoding.
+
+### Cookie.<span class="apidocCodeKeywordSpan">remove</span>(key)
+
+**Alias: Cookie(key, null)**
+
+Remove a cookie.
+
+## License
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tiny-cookie.set" id="apidoc.element.tiny-cookie.set">
+        function <span class="apidocSignatureSpan">tiny-cookie.</span>set
+        <span class="apidocSignatureSpan">(key, value, raw, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (key, value, raw, opts) {
+  if (raw !== true) {
+    opts = raw;
+    raw = false;
+  }
+  opts = opts ? convert(opts) : convert({});
+  var cookie = key + &#x27;=&#x27; + (raw ? value : encodeURIComponent(value)) + opts;
+  document.cookie = cookie;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Cookie.getRaw(key)
+
+**Also: Cookie.get(key, true)**
+
+Get the cookie value without decoding.
+
+### Cookie.<span class="apidocCodeKeywordSpan">set</span>(key, value, options)
+
+**Alias: Cookie(key, value, options)**
+
+Set a cookie with encoding the value, using `encodeURIComponent`. The `options` parameter is an object. And its property can be
+a valid cookie option, such as `path`(default: root path `/`), `domain`, `expires`/`max-age` or `secure` (Note: the `secure` flag
+ will be set if it is an truthy value, such as `true`, or it will be not set). For example, you can set the expiration:
+
+```js
+var now = new Date;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tiny-cookie.setRaw" id="apidoc.element.tiny-cookie.setRaw">
+        function <span class="apidocSignatureSpan">tiny-cookie.</span>setRaw
+        <span class="apidocSignatureSpan">(key, value, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setRaw = function (key, value, opts) {
+  Cookie.set(key, value, true, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Cookie.set(&#x27;stringSuffixM&#x27;, &#x27;One month later&#x27;, { expires: &#x27;1M&#x27; });
+Cookie.set(&#x27;stringSuffixD&#x27;, &#x27;One day later&#x27;, { expires: &#x27;1D&#x27; });
+Cookie.set(&#x27;stringSuffixh&#x27;, &#x27;One hour later&#x27;, { expires: &#x27;1h&#x27; });
+Cookie.set(&#x27;stringSuffixm&#x27;, &#x27;Ten minutes later&#x27;, { expires: &#x27;10m&#x27; });
+Cookie.set(&#x27;stringSuffixs&#x27;, &#x27;Thirty seconds later&#x27;, { expires: &#x27;30s&#x27; });
+```
+
+### Cookie.<span class="apidocCodeKeywordSpan">setRaw</span>(key, value, options)
+
+**Also: Cookie.set(key, value, true, options)**
+
+Set a cookie without encoding.
+
+### Cookie.remove(key)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
